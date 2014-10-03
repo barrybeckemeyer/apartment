@@ -1,0 +1,10 @@
+include navbar
+
+table.table
+	thead
+		tr
+			th Username
+	tbody
+		each item in users
+			tr
+				td #{item.username}

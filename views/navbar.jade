@@ -1,0 +1,31 @@
+include html
+header.navbar-inverse(role="banner")
+	div.container
+		nav(navigation)
+			div.navbar-header
+				button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="/") 959 Gayley
+			div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
+				ul.nav.navbar-nav
+					li
+						a(href="/chores") Chores
+					li
+						a(href="/payments") Payments
+					li.dropdown
+						a.dropdown-toggle(href="#", data-toggle="dropdown") Dropdown 
+							span.caret 
+						ul.dropdown-menu(role="menu")
+							li
+								a(href="#") Action
+							li
+								a(href="#") Another Action
+							li.divider
+							li
+								a(href="#") Separated link
+							li.divider
+							li
+								a(href="#") One more separated link

@@ -1,0 +1,28 @@
+include navbar
+
+
+table.table
+	thead
+		tr
+			th From
+			th To
+			th Amount
+			th Description
+	tbody
+		each item in payments
+			tr
+				td #{item.from}
+				td #{item.to}
+				td #{item.amount}
+				td #{item.description}
+
+.container
+	button.btn.btn-primary(type="button", data-toggle="collapse", data-target="#demo") Add a payment
+
+	.collapse#demo 
+		form(method="post", action="/addPayment")
+			input(type="text", name="to", placeholder="Make payment to:")
+			input(type="text", name="from", placeholder="Make payment from:")
+			input(type="text", name="amount", placeholder="Amount to pay:")
+			input(type="text", name="description", placeholder="Reason for payment:")
+			input(type="submit", value="Add")
